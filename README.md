@@ -44,7 +44,7 @@ You can run the application in two ways:
 bash
 
 mvn spring-boot:run
-
+mvn spring-boot:run -Dspring-boot.run.arguments="--server.port=808 --------------- to run on specific port number
 3. Using the Packaged JAR:
 After building the project, run the packaged JAR file:
 
