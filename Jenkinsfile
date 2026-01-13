@@ -11,9 +11,7 @@ pipeline {
      stage ('build') {
       steps {
         sh '''
-      whoami
-      pwd
-      ls
+      sudo apt update
         '''
       }
     }
