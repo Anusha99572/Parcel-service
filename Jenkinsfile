@@ -20,8 +20,9 @@ pipeline {
     stage ('deploy') {
       steps {
         sh '''
-       mvn clean install
-       mvn spring-boot:run -Dspring-boot.run.arguments=--server.port=9090
+        whoami
+       //mvn clean install
+       //mvn spring-boot:run -Dspring-boot.run.arguments=--server.port=9090
        
        '''
       }
