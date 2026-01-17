@@ -14,6 +14,7 @@ pipeline {
      
      export JAVA_HOME=$(dirname $(dirname $(readlink -f $(which java))))
      export PATH=$JAVA_HOME/bin:$PATH
+     sudo apt install maven -y
         '''
       }
     }
@@ -21,8 +22,8 @@ pipeline {
       steps {
         sh '''
         whoami
-       //mvn clean install
-       //mvn spring-boot:run -Dspring-boot.run.arguments=--server.port=9090
+       mvn clean install
+       mvn clean deploy
        
        '''
       }
